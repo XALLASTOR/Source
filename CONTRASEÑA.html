@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Protegida</title>
+</head>
+<body>
+
+    <h1>Ingrese la contraseña:</h1>
+
+    <form id="passwordForm">
+        <input type="password" id="passwordInput" placeholder="Contraseña">
+        <button type="button" onclick="checkPassword()">Ingresar</button>
+    </form>
+
+    <p id="statusMessage"></p>
+
+    <script>
+        function checkPassword() {
+            var enteredPassword = document.getElementById('passwordInput').value;
+            
+            if (enteredPassword === '12345678a') {
+                window.location.href = 'https://drive.google.com/drive/folders/1AlCLvouduY0OVulA3Kx2K9DCfd8kzOYK?usp=sharing';
+            } else {
+                document.getElementById('statusMessage').textContent = 'Contraseña incorrecta';
+            }
+        }
+    </script>
+
+</body>
+</html>
